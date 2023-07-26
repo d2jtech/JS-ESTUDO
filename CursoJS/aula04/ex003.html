@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 002 - JavaScript</title>
+    <title>Exercicio 003 - JavaScript</title>
     <style>
         body{
             background-color: rgb(56, 56, 112);
@@ -19,10 +19,14 @@
 </head>
 <body>
     <h1>Aula 06</h1><!-- -->
-    <p>Exercicio 002</p>
+    <p>Exercicio 003</p>
     <script>
-        var nome = window.prompt('Qual o seu nome?')
-        window.alert('É um grande prazer te conhecer, '+ nome)
-    </script>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        //window.alert('A soma dos valores é ' + String(s))
+
+        window.alert(`A soma entre ${n1} e ${n2} é ${s }`)
+    </script> 
 </body>
 </html>
