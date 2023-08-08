@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECAGEM PAÍS</title>
+</head>
+<body>
+    <H1>País de Origem</H1>
+    <P>Qual seu país?</P>
+    <label for="txtpais" id="lb">País: </label>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="check" onclick="checkpais()">
+    <div id="res"></div>
+
+    <script>
+        function checkpais(){
+            var txpais = window.document.getElementById('txtpais')
+            var res = window.document.getElementById('res')
+            var paisOrigem = String(txpais.value)
+            
+            res.innerHTML = `<p>Seu País de origem é <strong>${paisOrigem}!</strong></p>`
+        
+            if(paisOrigem=='Brasil'){
+                res.innerHTML += `<p>Você é <strong>Brasileiro!!!</strong></p>`
+            } else{
+                res.innerHTML += "<p>Você é <strong>ESTRANGEIRO!</strong></p>"
+            }
+            
+            }
+    </script>
+
+
+</body>
+</html>
