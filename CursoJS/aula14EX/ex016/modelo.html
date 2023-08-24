@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercicio</title>
+    <title>Contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>TÍTULO</h1>
+        <h1>Vamor Contar</h1>
     </header>
     <section>
         <div>
-            <p>testando...</p>
+            <p>
+                Início: 
+                <input type="number" name="txini" id="txini">
+            </p>
+            <p>
+                Fim:
+                <input type="number" name="txfim" id="txfim">
+            </p>
+            <p>
+                Passo:
+                <input type="number" name="txpasso" id="txpasso">
+            </p>
+            <p>
+                <input type="button" value="contar" onclick="contar()" id="btnC">
+            </p>
         </div>
-        <div>
-            Olá!
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
     <footer>
