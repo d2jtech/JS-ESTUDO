@@ -1,9 +1,27 @@
 function contar(){
-    var inicio = document.querySelector('div#txini')
-    var fim = document.querySelector('div#txfim')
-    var passo = document.querySelector('div#txpasso')
-    var res = document.querySelector('div#res')
+    let ini = document.getElementById('txini')
+    let fim = document.getElementById('txfim')
+    let passo = document.getElementById('txpasso')
+    let res = document.getElementById('res')
 
-    alert(`Dados alocados  inicio:${inicio}  ,Fim:${fim}  , Passo:${passo} lincados e validados!`)
+    if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+        window.alert('[ERRO] Faltam dados!')
+    } else {
+        res.innerHTML = 'Contando: ' 
+        let i = Number(ini.value)
+        let f = Number(fim.value)   
+        let p = Number(passo.value)
+
+        if(i < f){
+            for(let c =i; c<=f; c+=p){
+                res.innerHTML += `${c} \u{1F449}`
+            }
+        } else{
+            for (let c = i; c<=f; c +=p){
+                res.innerHTML += ` ${c} \u{1F449}`
+            }
+        }
+        res.innerHTML += `\u{1F3C1}`
+    }
 
 }
